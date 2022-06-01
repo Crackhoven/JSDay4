@@ -1,36 +1,44 @@
-const nameInput = document.querySelector(".name-item");
-
-const btnAdd = document.querySelector(".add-name");
-
-const nameListContainer = document.querySelector(".nameList");
-
-const nameList = [];
-
-const printItems = () => {
-    nameListContainer.innerHTML = "";
-    nameList.forEach((item) => {
-        nameListContainer.innerHTML += `<li class="list-group-item">${item}</li>`;
-    });
-};
-
-printItems();
-
-const addItem = () => {
-    console.log(nameInput.value);
-    nameList.push(nameInput.value);
-    nameInput.value = "";
-    printItems();
-};
-
-btnAdd.addEventListener("click", addItem);
-
-const coloredInput = (e) => {
+let printf = (e) => {
     console.log(e.target.value);
-    if (e.target.value.length > 5) {
-        e.target.style.color = "red";
+    let fname = e.target.value;
+
+    if (fname.length < 5) {
+        document.getElementById("fname")
+            .style.color = "red";
+
     } else {
-        e.target.style.color = "green";
+        document.getElementById("fname")
+            .style.color = "green";
     }
 };
 
-nameInput.addEventListener("input", coloredInput);
+let printl = (e) => {
+    console.log(e.target.value);
+    let lname = e.target.value;
+
+    if (lname.length < 5) {
+        document.getElementById("lname")
+            .style.color = "red";
+
+    } else {
+        document.getElementById("lname")
+            .style.color = "green";
+    }
+};
+
+let printage = (e) => {
+    console.log(e.target.value);
+    let age = e.target.value;
+
+    if (age < 19) {
+        document.getElementById("age")
+            .style.color = "red";
+
+    } else {
+        document.getElementById("age")
+            .style.color = "green";
+    }
+};
+document.getElementById("age").addEventListener("input", printage);
+document.getElementById("fname").addEventListener("input", printf);
+document.getElementById("lname").addEventListener("input", printl);
