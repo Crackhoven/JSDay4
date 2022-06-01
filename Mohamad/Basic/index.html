@@ -9,23 +9,34 @@
 </head>
 
 <body>
-    <form class="container">
-        <div class="mb-3">
-            <label for="nameList" class="form-label">First Name</label>
-            <input type="text" class="form-control name-item" aria-describedby="emailHelp" id="fname">
-        </div>
-        <div class="mb-3">
-            <label for="nameList" class="form-label">Last Name</label>
-            <input type="text" class="form-control name-item" id="lname">
-        </div>
-        <div class="mb-3">
-            <label for="nameList" class="form-label">Age</label>
-            <input type="number" class="form-control name-item" id="age">
-        </div>
-        <button type="button" id="btn" class="btn btn-primary add-name">Submit</button>
-    </form>
-    <ul class="container list-group mt-5 nameList">
-    </ul>
+    <div class="info">
+        <form class="container">
+            <div class="mb-3">
+                <label for="nameList" class="form-label">First Name</label>
+                <input type="text" class="form-control name-item" aria-describedby="emailHelp" id="fname">
+            </div>
+            <div class="mb-3">
+                <label for="nameList" class="form-label">Last Name</label>
+                <input type="text" class="form-control name-item" id="lname">
+            </div>
+            <div class="mb-3">
+                <label for="nameList" class="form-label">Age</label>
+                <input type="number" class="form-control name-item" id="age">
+            </div>
+            <button type="button" id="btn" class="btn btn-primary add-name">Submit</button>
+        </form>
+        <ul class="container list-group mt-5 nameList">
+        </ul>
+
+        <select class="form-select" aria-label="Default select example">
+        <option value="1" id ="it">IT</option>
+        <option value="2" id ="hos">hospitality</option>
+      </select>
+    </div>
+
+
+
+
     <script src="./script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
